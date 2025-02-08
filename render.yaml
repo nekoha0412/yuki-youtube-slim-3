@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: nekoha-yuki-youtube-slim
+    name: nekoha-yuki-youtube-slim-3
     env: python
     region: Singapore
     plan: free
