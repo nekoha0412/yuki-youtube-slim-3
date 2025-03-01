@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: nekoha-yuki-youtube-slim-3
+    name: cookie-energie
     env: python
     region: Singapore
     plan: free
