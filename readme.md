@@ -1,3 +1,5 @@
+@taiga905 (yuki)さんのリポジトリをフォークして、@LunaKamituki さんの旧約聖書のデザインと@siawaseok3 さんのCookieのデザイン/コードを使わさせていただきました
+
 ASGIで動く  
 デプロイボタンは追加していく予定です  
 blog内に静的サイトを入れると認証されていない時にそのサイトが表示されます。  
@@ -9,7 +11,7 @@ Renderを使用する場合の手順
 1.GitHubアカウントを作成する  
 2.名前はなんでもいいのでリポジトリを作成する(プライベートリポジトリにすることをおすすめします)  
 3.Import Codeを押して<a href="https://github.com/taiga905/yuki-youtube-slim-3/"><u>https://github.com/taiga905/yuki-youtube-slim-3/</u></a>と入力  
-4.render.yamlを開いて編集(鉛筆のマーク)を押し,Nameの横のyuki-youtube-slim-3をサイトのURLの最初の部分にしたい文字列に変更する(yuki-testならURLは https://yuki-y.onrender.com になる)  
+4.render.yamlを開いて編集(鉛筆のマーク)を押し,Nameの横の yuki-youtube-slim-3 をサイトのURLの最初の部分にしたい文字列に変更する(yuki-testならURLは https://yuki-test.onrender.com になる)  
 5.Deploy to Renderボタンを押し,Service Group Nameに適当な文字列を入れてApply(事前にRenderのアカウントを作っておく)
 <br>
 <a href="https://render.com/deploy?repo=https://github.com/taiga905/yuki-youtube-slim-3">
