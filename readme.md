@@ -18,8 +18,8 @@ Renderを使用する場合の手順
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
 <br>
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/taiga905/yuki-youtube-slim-3)
-<br>
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&name=yuki-tango-level&repository=https://github.com/taiga905/yuki-youtube-slim-3&branch=main)
-<br>
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://deploy.azure.com/?repository=https://github.com/taiga905/yuki-youtube-slim-3)
+[![Deploy to Netlify](docs/images/netlify-button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/taiga905/yuki-youtube-slim-3)
+
+[![Deploy to Koyeb](docs/images/koyeb-button.svg)](https://app.koyeb.com/deploy?type=git&name=yuki-tango-level&repository=https://github.com/taiga905/yuki-youtube-slim-3&branch=main)
+
+[![Deploy to Azure](docs/images/azure-button.svg)](https://deploy.azure.com/?repository=https://github.com/taiga905/yuki-youtube-slim-3)
