@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: cookie-energie
+    name: cookie-energy
     env: python
     region: Singapore
     plan: free
