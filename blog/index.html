@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/nekocat.ico" />
   <title>英単語レベル</title>
   <script>
     function getlevel() {
@@ -12,13 +13,13 @@
       document.cookie = "yuki=True; path=/; max-age=2592000;";
       } else {
     let req = new XMLHttpRequest();
-     req.addEventListener("load", function() {
+      req.addEventListener("load", function() {
       document.getElementById('info').textContent = this.responseText;
-     });
-       req.open("GET", "/answer?q=" + encodeURIComponent(word));
+      });
+        req.open("GET", "/answer?q=" + encodeURIComponent(word));
         req.send();
-       }
-       }
+        }
+        }
   </script>
 </head>
 <body>

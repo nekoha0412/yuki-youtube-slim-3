@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: neko2ku
+    name: cookie-energie
     env: python
     region: Singapore
     plan: free
