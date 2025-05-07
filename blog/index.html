@@ -3,37 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Yuki YouTube & BBS Icon -->
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/IMG_9455-modified.png">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/IMG_9455-modified.png" type="image/png">
-    <link rel="apple-touch-icon" sizes="256x256" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/IMG_9455-modified.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/180.png">
-    <link rel="apple-touch-icon" sizes="32x32" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/32.png">
-    <link rel="apple-touch-icon" sizes="16x16" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/16.png">
+  <!-- Yuki YouTube & BBS Icon -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/IMG_9455-modified.png">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/IMG_9455-modified.png" type="image/png">
+  <link rel="apple-touch-icon" sizes="256x256" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/IMG_9455-modified.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/180.png">
+  <link rel="apple-touch-icon" sizes="32x32" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/32.png">
+  <link rel="apple-touch-icon" sizes="16x16" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/16.png">
   <title>英単語レベル</title>
   <script>
     function getlevel() {
-    let word = document.getElementById('word').value;
+      let word = document.getElementById('word').value;
       if (word === "yuki") {
-     // 30日間Cookieを保持
-      document.cookie = "yuki=True; path=/; max-age=2592000;";
+        // 30日間Cookieを保持
+        document.cookie = "yuki=True; path=/; max-age=2592000;";
+        // トップページにリダイレクト
+        location.href = "/";
       } else {
-    let req = new XMLHttpRequest();
-      req.addEventListener("load", function() {
-      document.getElementById('info').textContent = this.responseText;
-      });
+        let req = new XMLHttpRequest();
+        req.addEventListener("load", function() {
+          document.getElementById('info').textContent = this.responseText;
+        });
+        req.addEventListener("error", function() {
+          document.getElementById('info').textContent = "エラーが発生しました。";
+        });
         req.open("GET", "/answer?q=" + encodeURIComponent(word));
         req.send();
-        }
-        }
+      }
+    }
   </script>
 </head>
 <body>
-    <p>英単語のレベルを出します。<br>
-    その単語が文脈から判断するべき単語か, 覚えておくべき単語かの参考にしてください。</p>
+  <p>
+    英単語のレベルを出します。<br>
+    その単語が文脈から判断するべき単語か, 覚えておくべき単語かの参考にしてください。
+  </p>
 
-    <input id="word" type="text" />
-    <input type="button" onClick="getlevel()" value="確認" />
-    <div id="info"></div>
+  <input id="word" type="text" />
+  <input type="button" onClick="getlevel()" value="確認" />
+  <div id="info"></div>
 </body>
 </html>
